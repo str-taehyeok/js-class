@@ -60,19 +60,34 @@ mulTwo(3, 5, (mulNumber) => {
 // 3) 두 정수의 값 중 작은 값을 반환하여 출력
 const compare = (num1, num2, callback) => {
   if(num1 > num2){
-    callback(num2)
+    callback(`더 작은 값: ${num2}`)
   }if(num1 < num2){
-    callback(num1)
+    callback(`더 작은 값: ${num1}`)
   }
 }
 compare(10,5,print)
 
 // 4) 문자열을 받아서 순서를 반대로 바꾼 후 출력
-const reverse = () => {
-  
+const reverse = (text, callback) => {
+  callback(text.split("").reverse().join(""))
 }
-// 5) 사용자가 입력한 값까지 누적합한 후 5의 배수인지 확인 후 출력
+reverse("안녕하세요",print)
 
+// 5) 사용자가 입력한 값까지 누적합한 후 5의 배수인지 확인 후 출력
+const sumNum = (numbers, callback) => {
+  let sum = 0;
+  for(let i = 0; i <= numbers; i++){
+    sum += i;
+  }
+  callback(sum);
+}
+
+const checkFiveTimes = (num, callback) => {
+  callback(num % 5 == 0 ? `${num}은 5의 배수가 맞습니다.` : `${num}은 5의 배수가 아닙니다.`);
+}
+sumNum(5,(sum)=>{
+  checkFiveTimes(sum, print);
+})
 
 
 
