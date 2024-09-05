@@ -18,12 +18,14 @@ console.log(number.map(c => hangle.charAt(c)).join(""));
 
 // 4) 1~100까지 합 출력
 const arr3 = Array(100).fill(0);
+let sum =0;
+arr3.map((data, i) => i + 1).forEach((data) => sum += data);
 
-arr3.map((data,i) => i + 1).map(data => sum += data).forEach(sum => console.log(sum));
+console.log(sum);
 
 // 5) 문자열 반대로 출력하기 .reverse() 사용
-const arr4 = ["가나다라마바사"];
-console.log(arr4.sort((a,b)=>a-b).reverse().join(""));
+const text = "가나다라마바사";
+console.log(text.split("").reverse().join(""));
 
 // 6) 전화번호를 파라미터로 받아서 파싱하기
 // ex) 010-1234-5678

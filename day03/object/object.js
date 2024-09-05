@@ -1,13 +1,13 @@
-// const obj = {
-//   name : "김태혁",
-//   age : 27
-// }
+const obj = {
+  name : "김태혁",
+  age : 27
+}
 
 // obj.key 접근법
-// obj.name = "홍길동";
-// obj.age = 20;
+obj.name = "홍길동";
+obj.age = 20;
 
-// console.log(obj.age);
+console.log(obj.age);
 
 // obj[key] 접근법
 // key 값에 규칙성을 주고 싶을 때 사용하는 방법
@@ -64,32 +64,22 @@ const users = {
 //   console.log(products[key]);
 // }
 // for문을 이용하여 모든 유저의 point를 누적합한 후 화면에 출력하기
-function print(value){
-  console.log(value);
-}
-const getUsers = (users, callback) => {
-  let result = 0;
-  for(let user in users){
-   result += users[user].point;
-  }
-  callback(result);
-}
-
-getUsers(users, print)
-
-// for문을 이용하여 모든 유저의 point를 누적합한 후 콘솔에 출력하기
-// const getUserPoint = (users, callback) => {
+// function print(value){
+//   console.log(value);
+// }
+// const getUsers = (users, callback) => {
 //   let result = 0;
 //   for(let user in users){
-//     result += users[user].point;
+//    result += users[user].point;
 //   }
-//   callback(result)
+//   callback(result);
 // }
-// const printPoint = (point) => {
-//   console.log(point)
+// let sum = 0;
+// for(let user in users){
+//   sum += users[user].point
 // }
-
-// getUserPoint(users, printPoint)
+// console.log(sum)
+// getUsers(users, print)
 
 
 
