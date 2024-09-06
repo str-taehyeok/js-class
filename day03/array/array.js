@@ -102,11 +102,11 @@ const arr9 = [100, 200, 300, 400, 500, 600, 700];
 
 
 // arr9번을 forEach를 사용하여, 모든 배열의 값을 제곱값으로 변경하기
-// arr9.forEach((data,i,datas)=>{
-//   datas[i] += data * data; // datas[i] *= datas[i]
-// });
+arr9.forEach((data,i,datas)=>{
+  datas[i] += data * data; // datas[i] *= datas[i]
+});
 
-// console.log(arr9)
+console.log(arr9)
 
 // .map(callback(data, i, datas))
 // 값을 저장해서 [새로운 배열]로 리턴한다.

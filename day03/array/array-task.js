@@ -30,5 +30,12 @@ console.log(text.split("").reverse().join(""));
 // 6) 전화번호를 파라미터로 받아서 파싱하기
 // ex) 010-1234-5678
 // result) 010-****-5678
-const phoneNumber = "010-1234-5678".replace("1234","****");
-console.log(phoneNumber);
+// const phoneNumber = "010-1234-5678".replace("1234","****");
+const phoneNumber = "010-1234-5678".split("");
+phoneNumber.splice(4,4,"*", "*","*","*")
+console.log(phoneNumber.join(""));
+
+// const phoneNumber = "010-1234-5678".split("-");
+// phoneNumber[1] ="****";
+// const parsephoneNumber = phoneNumber.join("-")
+// console.log(parsephoneNumber)
