@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    button{
+      display: block;
+      border-radius: 4px;
+      background-color: aqua;
+      margin-top: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <input type="text" name="animal" placeholder="동물의 이름을 입력하세요!">
+    <p id="result"></p>
+  </div>
+</body>
+<script>
+  // 사용자가 동물 이름을 입력하고 엔터를 치면
+  // 사용자가 입력한 동물의 버튼을 만든다.
+  const animal = document.querySelector("input[type='text']") // 동물을 불러온다.
+  const result = document.querySelector("#result")
+  console.log(animal, result)
+  //  엔터를 치면 버튼 생기는 이벤트 생성
+  animal.addEventListener("keypress", (e)=>{
+    if(e.key === "Enter"){ // -> '엔터일 때' 라는 조건식
+      // result.innerHTML += `<button>${e.target.value}</button>`
+      const button = document.createElement("button"); // 버튼요소 만들기
+      button.innerText = e.target.value; // 버튼에 입력한 값 들어가게끔
+      result.appendChild(button) // p 태그에다가 버튼이라는 자식요소를 넣어줌
+    }
+  })
+  
+</script> 
+</html>
