@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최종실습</title>
+  <style>
+    #center{
+      position: relative;
+      width: 500px;
+      margin: 0 auto;
+    }
+    table{
+      font-size: 20px;
+    }
+    th{
+      padding : 5px 20px;
+    } 
+    .table-head{
+      background-color: lemonchiffon;
+    }
+    .form{
+      position: absolute;
+      display: flex;
+      right: 286px;
+      flex-direction: column;
+      width: 200px;
+    }
+    .form legend{
+      text-align: center;
+    } 
+    .form button{
+      width: 100%;
+    } 
+  </style>
+</head>
+<body>
+  <div id="center">
+    <div>
+      <table border="1">
+        <tr class="table-head">
+          <th>구분</th>
+          <th>이름</th>
+        </tr>
+        <tr>
+          <th>아동</th>
+          <th>무료</th>
+        </tr>
+        <tr>
+          <th>청소년</th>
+          <th>2000</th>
+        </tr>
+        <tr>
+          <th>성인</th>
+          <th>5000</th>
+        </tr>
+      </table>
+    </div>
+    <form>
+      <fieldset class="form">
+        <legend>구분</legend>
+        <input type="text">
+        <button>확인</button>
+      </fieldset>
+    </form>
+  </div>
+</body>
+<script src="./jQuery.js"></script>
+<script>
+  
+</script>
+</html>
